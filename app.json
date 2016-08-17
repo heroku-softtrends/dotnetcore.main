@@ -1,8 +1,8 @@
 {
-  "name": "ASP.NET Core Web App",
+  "name": "ASP.NET Core Web/MVC App",
   "description": "Asp.Net website using ASP.NET Core",
   "website": "http://www.softtrends.com/",
-  "repository": "https://github.com/heroku-softtrends/dotnetcore.main",
+  "repository": "https://github.com/heroku-softtrends/dotnetmvc.sample",
   "logo": "http://www.softtrends.com/wp-content/uploads/2014/03/soft-trends-logo1.png",
   "keywords": ["aspnet core"],
   "buildpacks": [
