@@ -7,7 +7,7 @@
   "keywords": ["aspnet core"],
   "buildpacks": [
     {
-      "url": "https://github.com/softtrendsllc/aspnetcore-buildpack.git"
+      "url": "https://github.com/heroku-softtrends/dotnetcore.main.git"
     }
   ]
 }
