@@ -1,0 +1,13 @@
+{
+  "name": "Asp.NetCore Web App",
+  "description": "Asp.Net website using Asp.Net Core",
+  "website": "http://www.softtrends.com/",
+  "repository": "https://github.com/heroku-softtrends/dotnetcore.main",
+  "logo": "http://www.softtrends.com/wp-content/uploads/2014/03/soft-trends-logo1.png",
+  "keywords": ["aspnet core"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/softtrendsllc/aspnetcore-buildpack.git"
+    }
+  ]
+}
