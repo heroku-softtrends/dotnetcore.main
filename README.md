@@ -1,4 +1,4 @@
-# .Net Core Buildpack for Heroku
+# .NET Core Buildpack for Heroku
 
 This Buidpack can be used to compile and deploy .Net Core application, ASP.Net Application, ASP.Net MVC Application to Heroku. <br><br>
 This Buildpack can build and deploy any such application that does not have any particular database dependency. In order to deploy applications with Microsoft SQL Server, My SQL, or Postgress SQL separate buildpacks are available and the links for those are provided below. <br><br>
