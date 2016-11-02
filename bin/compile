@@ -108,6 +108,9 @@ ln -s ${BUILD_DIR}/dotnet ${HOME}
 export PATH="${HOME}/dotnet:${PATH}"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}"
 
+print "dotnet version"
+dotnet --version
+
 print "dotnet restore all dependencies"
 dotnet restore ${PROJECT_JSON_FILE} --no-cache
 print "dotnet restore all dependencies completed"
