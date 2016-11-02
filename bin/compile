@@ -100,9 +100,9 @@ export | grep -E -e ' (PATH|LD_LIBRARY_PATH|LIBRARY_PATH|INCLUDE_PATH|CPATH|CPPP
 echo "CORE_BRANCH: ${CORE_BRANCH}"
 echo "CORE_REL_VERSION: ${CORE_REL_VERSION}"
 echo "CORE_VERSION: ${CORE_VERSION}"
-CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/${CORE_BRANCH}/${CORE_REL_VERSION}/dotnet-dev-ubuntu-x64.${CORE_VERSION}.tar.gz"
+#CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/${CORE_BRANCH}/${CORE_REL_VERSION}/dotnet-dev-ubuntu-x64.${CORE_VERSION}.tar.gz"
 #CORE_DWLD_URL="https://download.microsoft.com/download/1/5/2/1523EBE1-3764-4328-8961-D1BD8ECA9295/dotnet-dev-ubuntu-x64.1.0.0-preview3-003930.tar.gz"
-#CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/Latest/dotnet-dev-ubuntu-x64.latest.tar.gz"
+CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/Latest/dotnet-dev-ubuntu-x64.${CORE_VERSION}.tar.gz"
 
 print "DotNet Core Sdk Package Installation Starts From : ${CORE_DWLD_URL}"
 mkdir -p "${BUILD_DIR}/dotnet"
