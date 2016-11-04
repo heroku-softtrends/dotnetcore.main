@@ -133,6 +133,8 @@ export CPPPATH="$INCLUDE_PATH"
 export PKG_CONFIG_PATH="${BUILD_DIR}/.apt/usr/lib/x86_64-linux-gnu/pkgconfig:${BUILD_DIR}/.apt/usr/lib/i386-linux-gnu/pkgconfig:${BUILD_DIR}/.apt/usr/lib/pkgconfig:$PKG_CONFIG_PATH"
 export | grep -E -e ' (PATH|LD_LIBRARY_PATH|LIBRARY_PATH|INCLUDE_PATH|CPATH|CPPPATH|PKG_CONFIG_PATH)='  > "$LD_DIR/export"
 
+echo "CORE_BRANCH: ${CORE_BRANCH}"
+echo "CORE_VERSION: ${CORE_VERSION}"
 print "DotNet Core Sdk Package Installation Starts From : ${CORE_DWLD_URL}"
 mkdir -p "${BUILD_DIR}/dotnet"
 curl ${CORE_DWLD_URL} -Ls | tar xz -C ${BUILD_DIR}/dotnet
@@ -143,12 +145,12 @@ if [ -n "$NODE_PATH" ]; then
 	export PATH="${BUILD_DIR}/node_modules/.bin:${PATH}"
 fi
 
+print "dotnet version"
+dotnet --version
+
 print "dotnet restore all dependencies"
 dotnet restore ${PROJECT_JSON_FILE} --no-cache
 print "dotnet restore all dependencies completed"
-
-print "dotnet version"
-dotnet --version
 
 #dotnet pulish using project.json
 print "dotnet publish starts."
