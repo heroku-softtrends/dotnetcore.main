@@ -92,13 +92,17 @@ if [ -z "${NETCORE_VERSION}" ]; then
 elif [[ "${NETCORE_VERSION}" != "latest" ]]; then
  	if [[ "${NETCORE_VERSION}" == *"1.0.0"* ]]; then
 		CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/1.0.0-preview2-003121/dotnet-dev-ubuntu-x64.1.0.0-preview2-003121.tar.gz"	
+	elif [[ "${NETCORE_VERSION}" == *"1.0.1"* ]]; then
+		CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/1.0.0-preview2-003131/dotnet-dev-ubuntu-x64.1.0.0-preview2-003131.tar.gz"
 	else
 		CORE_DWLD_URL="https://download.microsoft.com/download/8/C/9/8C9182C7-9DCD-40C1-B72A-BEC4C3FC1FC1/dotnet-dev-ubuntu-x64.1.0.0-preview2.1-003155.tar.gz"
+		#CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/1.0.0-preview2.1-003155/dotnet-dev-ubuntu-x64.1.0.0-preview2.1-003155.tar.gz"
 	fi
 fi
 
 if [ -z "${CORE_DWLD_URL}" ]; then
-	CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/${CORE_BRANCH}/Binaries/Latest/dotnet-dev-ubuntu-x64.${CORE_VERSION}.tar.gz"
+        CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/Latest/dotnet-dev-ubuntu-x64.${CORE_VERSION}.tar.gz"
+	#CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/${CORE_BRANCH}/Binaries/Latest/dotnet-dev-ubuntu-x64.${CORE_VERSION}.tar.gz"
 	#CORE_DWLD_URL="https://dotnetcli.blob.core.windows.net/dotnet/${CORE_BRANCH}/${CORE_REL_VERSION}/dotnet-dev-ubuntu-x64.${CORE_VERSION}.tar.gz"
 fi
 
