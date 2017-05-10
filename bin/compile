@@ -4,9 +4,9 @@
 # fail fast
 set -e
 
-if [ $STACK != "cedar-14" ]; then
-	echo "Stack ${STACK} not supported" && exit 1
-fi
+#if [ $STACK != "cedar-14" ]; then
+#	echo "Stack ${STACK} not supported" && exit 1
+#fi
 
 BUILD_DIR=$1
 CACHE_DIR=$2
