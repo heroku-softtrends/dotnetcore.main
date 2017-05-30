@@ -3,10 +3,10 @@
 
 # fail fast
 set -e
-
-#if [ $STACK != "cedar-14" ]; then
-#	echo "Stack ${STACK} not supported" && exit 1
-#fi
+echo "Current stack ${STACK} version"
+if [ $STACK != "cedar-14" ] && [ $STACK != "heroku-16" ]; then
+	echo "Stack ${STACK} not supported" && exit 1
+fi
 
 BUILD_DIR=$1
 CACHE_DIR=$2
@@ -124,6 +124,11 @@ apt-get $APT_OPTIONS update | indent
 
 mkdir -p ${BUILD_DIR}/.apt
 for DEB in $(ls -1 $LD_DIR/lib/*.deb); do
+  if [ $STACK == "cedar-14" ] && [ $(basename $DEB) == "libicu52_52.1-3ubuntu0.6_amd64.deb" ]; then
+	#libicu52_52.1-3ubuntu0.6_amd64.deb package not needed for cader-14 
+	continue
+  fi
+  
   print "Installing $(basename $DEB)"
   dpkg -x $DEB ${BUILD_DIR}/.apt/
 done
